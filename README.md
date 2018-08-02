@@ -25,7 +25,10 @@
 	
 		metodo close()
   
-+ \+criado main.principal
-    pvsm
-  +criado main.funcao
-    metodo print()
++ \+ criado main.principal
+		
+		pvsm
+		
++ \+ criado main.funcao
+    
+		metodo print()
