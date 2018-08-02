@@ -19,13 +19,19 @@ public class Control {
     */
     
     final static String DRIVER ="com.mysql.jdbc.Driver";
-    final static String URL = "jdbc:mysql://localhost:3306/";
+    final static String URL = "jdbc:mysql://localhost:3306/exemplo01";
     final static String USER = "root";
     final static String PASS = "";
     
     // .get() retorna connection com URL USER E PASS
     
     public Connection get() throws SQLException{
+        try {
+            //Carrega o driver especificado
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver não encontrado!"+e);
+        }
         Connection con = null;
         con = DriverManager.getConnection(URL, USER, PASS);
         
