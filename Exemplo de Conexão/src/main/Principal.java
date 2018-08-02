@@ -26,7 +26,6 @@ public class Principal extends Funcao {
             f.print("1. Verificar Existencia");
             f.print("2. Criar Usuário       ");
             
-            
             op = tc.nextInt();
         }
         
