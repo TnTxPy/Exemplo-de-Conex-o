@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package conexao;
 
 import java.sql.Connection;
@@ -11,10 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author Lucas
- */
 public class Control {
    /*
     *- SETANDO CONSTANTES
@@ -29,12 +20,22 @@ public class Control {
     final static String USER = "root";
     final static String PASS = "";
     
+    // .get() retorna connection com URL USER E PASS
+    
     public Connection get() throws SQLException{
         Connection con = null;
         con = DriverManager.getConnection(URL, USER, PASS);
         
         return con;
     }
+    
+    /*
+    
+    .close(con) fecha a connection
+    .close(con,stmt) fecha a connection e o PreparedStatement
+    .close(con,stmt,rs) fecha a connection e o PreparedStatement e o ResultSet
+    
+    */
     public void close(Connection con){
         try {
             if(con !=null){
