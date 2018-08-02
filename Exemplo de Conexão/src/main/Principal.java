@@ -16,8 +16,19 @@ public class Principal extends Funcao {
         */
         
         Scanner tc = new Scanner(System.in);
-        
+        Funcao f = new Funcao();
         boolean continuar = true;
+        int op;
+        while(continuar){
+            
+            f.print("CONEXAO SQL");
+            f.print("MENU PRINCIPAL");
+            f.print("1. Verificar Existencia");
+            f.print("2. Criar Usuário       ");
+            
+            
+            op = tc.nextInt();
+        }
         
         
     }
