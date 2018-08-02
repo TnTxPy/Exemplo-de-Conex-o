@@ -31,6 +31,7 @@ public class Control {
         return con;
     }
     
+    
     /*
     
     .close(con) fecha a connection
@@ -38,6 +39,7 @@ public class Control {
     .close(con,stmt,rs) fecha a connection e o PreparedStatement e o ResultSet
     
     */
+    
     
     public void close(Connection con){
         try {
