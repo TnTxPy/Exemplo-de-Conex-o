@@ -14,7 +14,8 @@ public class Control {
     *- URL = Destino do banco de dados,jdbc:mysql:// no caso como estou hospedando localmente
         localhost, porta 3306 / nome do banco de dados
     *- USER = nome do usuario para login no banco de dados, padrão root
-    *- PASS = senha do usuario para login no banco de dados, padrão     
+    *- PASS = senha do usuario para login no banco de dados, padrão   
+    * Teste
     */
     
     final static String DRIVER ="com.mysql.jdbc.Driver";
