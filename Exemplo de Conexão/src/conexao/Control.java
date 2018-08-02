@@ -48,7 +48,7 @@ public class Control {
             con.close();
             }
         } catch (Exception e) {
-            System.out.println("[ERRO] Função close classe connection erro de FECHAMENTO DE CONEXAO");
+            System.err.println("[ERRO] Função close classe connection erro de FECHAMENTO DE CONEXAO");
         }
     }
     public void close(Connection con, PreparedStatement stmt){
@@ -58,7 +58,7 @@ public class Control {
             stmt.close();
             }
         } catch (Exception e) {
-            System.out.println("[ERRO] Função close classe connection erro de FECHAMENTO DE STMT");
+            System.err.println("[ERRO] Função close classe connection erro de FECHAMENTO DE STMT");
         }
     }
     public void close(Connection con, PreparedStatement stmt,ResultSet rs){
@@ -68,7 +68,7 @@ public class Control {
             rs.close();
             }
         } catch (Exception e) {
-            System.out.println("[ERRO] Função close classe connection erro de FECHAMENTO DE RS");
+            System.err.println("[ERRO] Função close classe connection erro de FECHAMENTO DE RS");
         }
     }
     
