@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Control {
+    
    /*
     *- SETANDO CONSTANTES
     *- DRIVER = JDBC " com.mysql.jdbc.Driver "
@@ -15,6 +16,7 @@ public class Control {
     *- USER = nome do usuario para login no banco de dados, padrão root
     *- PASS = senha do usuario para login no banco de dados, padrão     
     */
+    
     final static String DRIVER ="com.mysql.jdbc.Driver";
     final static String URL = "jdbc:mysql://localhost:3306/";
     final static String USER = "root";
@@ -36,6 +38,7 @@ public class Control {
     .close(con,stmt,rs) fecha a connection e o PreparedStatement e o ResultSet
     
     */
+    
     public void close(Connection con){
         try {
             if(con !=null){
