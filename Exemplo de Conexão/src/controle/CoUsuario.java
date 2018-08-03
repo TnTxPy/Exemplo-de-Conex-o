@@ -1,5 +1,11 @@
 package controle;
 
+// COMENTAR E ARRUMAR TRATAMENTOS!
+// COMENTAR E ARRUMAR TRATAMENTOS!
+// COMENTAR E ARRUMAR TRATAMENTOS!
+// COMENTAR E ARRUMAR TRATAMENTOS!
+// COMENTAR E ARRUMAR TRATAMENTOS!
+
 import conexao.Control;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -60,6 +66,35 @@ public class CoUsuario {
             
         }
         return lista.contains(usu.getLogin());
+        
+    }
+    public List<Usuario> BuscaU(Usuario usu){
+        List<Usuario> lista = new ArrayList<Usuario>();
+        
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        String login = usu.getLogin();
+        String senha = usu.getSenha();
+        String nome = usu.getNome();
+        
+        try {
+            con = c.get();
+            stmt = con.prepareStatement("select * from usuarios where login = ?");
+            stmt.setString(1, login);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+                Usuario nU = new Usuario();
+                nU.setNome(rs.getString("nome"));
+                nU.setLogin(rs.getString("login"));
+                nU.setSenha(rs.getString("senha"));
+                lista.add(nU);
+                
+            }
+        } catch (SQLException ex) {
+            
+        }
+        return lista;
         
     }
     
