@@ -1,5 +1,10 @@
 # Exemplo de Conexão
 ## Conexão java com JDBC - SQL
+### v1.0.3
++ \+ criado o menu principal
+		
+		opção de cadastro do usuário
+		
 ### v1.0.2
 + \+ criado objetos.Usuario
 
